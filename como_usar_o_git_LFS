@@ -1,0 +1,64 @@
+####################################################
+#    arquivo ensinando a como usar o Git LFS       #
+####################################################
+
+
+Instalando o Git LFS
+
+Para instala-lo o processo é bem simples e rápido, digite no terminal:
+
+    sudo apt-get install git-lfs
+
+
+após isso, será baixado uma pasta com 4 arquivos, execute o arquivo: 
+
+    install.sh 
+
+
+
+##########################
+#  Habilitando o Git LFS
+##########################
+
+Com o git lfs instalado, vamos habilitá-lo globalmente com o comando abaixo:
+
+    git lfs install
+
+    OBS: esse comando deve ser executado uma vez EM CADA REPOSITÓRIO que vc QUEIRA O SUPORTE LFS.
+
+
+Agora dentro do seu repositório, você só precisa adicionar quais os tipos de arquivos que o git lfs vai gerenciar, exemplo:
+
+    git lfs track '*.iso'
+    git lfs track '*.zip'
+
+ou vc pode definir o caminho de uma pasta seguido do tipo de extensão de arquivo que o git lfs vai gerenciar, exemplo:
+
+    git lfs track 'imagens/*.odt'
+
+A partir daí todos os seu arquivos .iso, .zip e .odt por exemplo, serão gerenciados pelo git lfs, e não ocuparão espaço exagerado indevidamente.
+
+Repare que após o comando: git lfs track 'caminho/*.extensão', FOI GERADO O ARQUIVO .gitattributes. Esse arquivo ARMAZENA TODOS OS TIPOS DE EXTENSÃO DE ARQUIVO que deve RECEBER O SUPORTE LFS.
+
+Em seguida, vc pode utilizar o git da forma normalmente usada.
+
+
+
+##################################
+#  listar os tipos de arquivos 
+#    gerenciados pelo git lfs
+#################################
+Para ver os arquivos gerenciados pelo Git lfs você pode usar o comando: 
+
+    git lfs track
+
+
+uma vez informado ao Git LFS quais caminhos gerenciar, vc pode adicionar seus arquivos e commitá-los como faria normalmente.
+
+Quando você envia suas alterações para seu repositório Git remoto, Git LFS intercepta os arquivos e os envia para o servidor Git LFS. 
+
+
+
+
+
+
