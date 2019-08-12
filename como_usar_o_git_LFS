@@ -2,6 +2,10 @@
 #    arquivo ensinando a como usar o Git LFS       #
 ####################################################
 
+O Git LFS é um recurso do git/gitHub para armazenar arquivos maiores que 50MB nos servidores GitHub. 
+Esse arquivo ensina a como instalar esse plugin na máquina do usuário (para usar com o git) para que 
+esses arquivos maiores que 50MB POSSAM SER ENVIADOS AO GitHub da forma correta.
+
 
 Instalando o Git LFS
 
@@ -13,6 +17,8 @@ Para instala-lo o processo é bem simples e rápido, digite no terminal:
 após isso, será baixado uma pasta com 4 arquivos, execute o arquivo: 
 
     install.sh 
+    
+    OBS: Para executar esse arquivo digite no terminal: ./install.sh
 
 
 
@@ -36,9 +42,12 @@ ou vc pode definir o caminho de uma pasta seguido do tipo de extensão de arquiv
 
     git lfs track 'imagens/*.odt'
 
-A partir daí todos os seu arquivos .iso, .zip e .odt por exemplo, serão gerenciados pelo git lfs, e não ocuparão espaço exagerado indevidamente.
 
-Repare que após o comando: git lfs track 'caminho/*.extensão', FOI GERADO O ARQUIVO .gitattributes. Esse arquivo ARMAZENA TODOS OS TIPOS DE EXTENSÃO DE ARQUIVO que deve RECEBER O SUPORTE LFS.
+A partir daí todos os seu arquivos .iso, .zip e .odt por exemplo, serão gerenciados pelo git lfs, e não ocuparão espaço 
+exagerado indevidamente.
+
+Repare que após o comando: git lfs track 'caminho/*.extensão', FOI GERADO O ARQUIVO .gitattributes. Esse arquivo ARMAZENA 
+TODOS OS TIPOS DE EXTENSÃO DE ARQUIVO que são gerenciado pelo Git LFS.
 
 Em seguida, vc pode utilizar o git da forma normalmente usada.
 
@@ -55,7 +64,8 @@ Para ver os arquivos gerenciados pelo Git lfs você pode usar o comando:
 
 uma vez informado ao Git LFS quais caminhos gerenciar, vc pode adicionar seus arquivos e commitá-los como faria normalmente.
 
-Quando você envia suas alterações para seu repositório Git remoto, Git LFS intercepta os arquivos e os envia para o servidor Git LFS. 
+Quando você envia suas alterações para seu repositório Git remoto, Git LFS intercepta os arquivos e os envia para o 
+servidor Git LFS. 
 
 
 
